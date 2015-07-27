@@ -1,0 +1,90 @@
+<html>
+  <head>
+  	<title>Leaflet</title>
+  	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+  	<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+  	<script src="leaflet-plugins-master/layer/tile/Bing.js"></script>
+  </head>
+  <body>
+  	<div style="width:100%; height:100%" id="map"></div>
+      <script type='text/javascript'>
+        var map = new L.Map('map', {center: new L.LatLng(48.6755, 11.936), zoom: 8 });
+        var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+        // for all possible values and explanations see "Template Parameters" in https://msdn.microsoft.com/en-us/library/ff701716.aspx
+        imagerySet = "Road"; // AerialWithLabels | Birdseye | BirdseyeWithLabels | Road
+
+        var bing = new L.BingLayer("ArhpWhXoG43hHjIIkO2q9-Xiz0gdZWTIxR2Y4C3s3N8bBoRF99O839NbMxgl6O5S ", {type: imagerySet});
+
+        map.addLayer(bing);
+        map.addControl(new L.Control.Layers({'OSM':osm, "Bing":bing}, {}));
+		
+		
+				
+		var vfbkarte = [	
+		
+		{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Mitchell Langerak","Rückennummer":1,"Position":"Tor","Geburtstag":"22.08.88","Geburtsort":"Emerald","Geburtsland":"Australien","Entfernung zum \nVereinsort in km":"15464,97","Nationalität 1":"Australien","Nationalität 2":"","im Verein seit":2015,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[148.154007,-23.5217991]}},{"type":"Feature","properties":{"Verein":"FC Bayern","Name":"Odisseas Vlachodimos","Rückennummer":17,"Position":"Tor","Geburtstag":"29.04.94","Geburtsort":"Stuttgart","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":0,"Nationalität 1":"Deutschland","Nationalität 2":"Griechenland","im Verein seit":2002,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[9.1719198,48.7676697]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Przemysław Tytoń","Rückennummer":22,"Position":"Tor","Geburtstag":"04.01.87","Geburtsort":"Zamość","Geburtsland":"Polen","Entfernung zum \nVereinsort in km":"1028,13","Nationalität 1":"Polen","Nationalität 2":"","im Verein seit":2015,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[23.2481995,50.7242012]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Emiliano Insúa","Rückennummer":2,"Position":"Abwehr","Geburtstag":"07.01.89","Geburtsort":"Buenos Aires","Geburtsland":"Argentinien","Entfernung zum \nVereinsort in km":"11424,73","Nationalität 1":"Argentinien","Nationalität 2":"","im Verein seit":2015,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[-58.4458771,-34.6145554]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Daniel Schwaab","Rückennummer":3,"Position":"Abwehr","Geburtstag":"23.08.88","Geburtsort":"Waldkirch","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"121,58","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2013,"Vertrag bis":2016,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[7.9688501,48.0905991]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Timo Baumgartl","Rückennummer":5,"Position":"Abwehr","Geburtstag":"04.03.96","Geburtsort":"Böblingen","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"19,7","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2011,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[8.9949303,48.6689987]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Georg Niedermeier","Rückennummer":6,"Position":"Abwehr","Geburtstag":"26.02.86","Geburtsort":"München","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"187,78","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2009,"Vertrag bis":2016,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[11.5144997,48.1390991]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Philip Heise","Rückennummer":14,"Position":"Abwehr","Geburtstag":"20.06.91","Geburtsort":"Düsseldorf","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"322,43","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2015,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[6.77604,51.21563]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Florian Klein","Rückennummer":16,"Position":"Abwehr","Geburtstag":"17.11.86","Geburtsort":"Linz","Geburtsland":"Österreich","Entfernung zum \nVereinsort in km":"375,94","Nationalität 1":"Österreich","Nationalität 2":"","im Verein seit":2014,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[14.2853,48.318501]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Antonio Rüdiger","Rückennummer":24,"Position":"Abwehr","Geburtstag":"03.03.93","Geburtsort":"Berlin","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"508,76","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2011,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[13.4023285,52.5014076]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Stephen Sama","Rückennummer":41,"Position":"Abwehr","Geburtstag":"05.03.93","Geburtsort":"Bamenda","Geburtsland":"Kamerun","Entfernung zum \nVereinsort in km":"4763,36","Nationalität 1":"Deutschland","Nationalität 2":"Kamerun","im Verein seit":2014,"Vertrag bis":2016,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[10.16075,5.96069]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Martin Harnik","Rückennummer":7,"Position":"Mittelfeld","Geburtstag":"10.06.87","Geburtsort":"Hamburg","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"532,12","Nationalität 1":"Österreich","Nationalität 2":"Deutschland","im Verein seit":2010,"Vertrag bis":2016,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[9.99247,53.553341]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Lukas Rupp","Rückennummer":8,"Position":"Mittelfeld","Geburtstag":"08.01.91","Geburtsort":"Heidelberg","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"78,82","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2015,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[8.7080698,49.4134903]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Daniel Didavi","Rückennummer":10,"Position":"Mittelfeld","Geburtstag":"21.02.90","Geburtsort":"Nürtingen","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"20,29","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2003,"Vertrag bis":2016,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[9.3464699,48.6165009]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Carlos Gruezo","Rückennummer":11,"Position":"Mittelfeld","Geburtstag":"19.04.95","Geburtsort":"Santo Domingo de los Colorados","Geburtsland":"Ecuador","Entfernung zum \nVereinsort in km":"9911,4","Nationalität 1":"Ecuador","Nationalität 2":"","im Verein seit":2014,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[-79.1726913,-0.254411]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Filip Kostić","Rückennummer":18,"Position":"Mittelfeld","Geburtstag":"01.11.92","Geburtsort":"Kragujevac","Geburtsland":"Serbien","Entfernung zum \nVereinsort in km":"1040,72","Nationalität 1":"Serbien","Nationalität 2":"","im Verein seit":2014,"Vertrag bis":2019,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[20.91721,44.029202]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Christian Gentner","Rückennummer":20,"Position":"Mittelfeld","Geburtstag":"14.08.85","Geburtsort":"Nürtingen","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"20,29","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2010,"Vertrag bis":2016,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[9.3464699,48.6165009]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Adam Hloušek","Rückennummer":21,"Position":"Mittelfeld","Geburtstag":"20.12.88","Geburtsort":"Turnov","Geburtsland":"Tschechien","Entfernung zum \nVereinsort in km":"470,09","Nationalität 1":"Tschechien","Nationalität 2":"","im Verein seit":2014,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[15.1457005,50.5876007]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Kevin Stöger","Rückennummer":23,"Position":"Mittelfeld","Geburtstag":"27.08.93","Geburtsort":"Steyr","Geburtsland":"Österreich","Entfernung zum \nVereinsort in km":"391,9","Nationalität 1":"Osterreich","Nationalität 2":"","im Verein seit":2009,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[14.4469004,48.0598984]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Serey Die","Rückennummer":26,"Position":"Mittelfeld","Geburtstag":"07.11.84","Geburtsort":"Abidjan","Geburtsland":"Elfenbeinküste","Entfernung zum \nVereinsort in km":"4991,61","Nationalität 1":"Elfenbeinküste","Nationalität 2":"","im Verein seit":2015,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[-4.0157599,5.3572102]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Mart Ristl","Rückennummer":27,"Position":"Mittelfeld","Geburtstag":"07.07.96","Geburtsort":"Schwäbisch Gmünd","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"41,91","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2010,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[9.79498,48.8000984]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Marvin Wanitzek","Rückennummer":28,"Position":"Mittelfeld","Geburtstag":"07.05.93","Geburtsort":"Bruchsal","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"59,31","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2013,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[8.581,49.126099]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Arianit Ferati","Rückennummer":31,"Position":"Mittelfeld","Geburtstag":"07.09.97","Geburtsort":"Bad Cannstadt","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":4,"Nationalität 1":"Deutschland","Nationalität 2":"Kosovo","im Verein seit":2011,"Vertrag bis":"","marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[9.2371397,48.8099213]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Jerome Kiesewetter","Rückennummer":42,"Position":"Mittelfeld","Geburtstag":"09.02.93","Geburtsort":"Berlin","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"508,76","Nationalität 1":"Vereinigte Staaten","Nationalität 2":"Deutschland","im Verein seit":2015,"Vertrag bis":2016,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[13.4023285,52.5014076]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Alexandru Maxim","Rückennummer":44,"Position":"Mittelfeld","Geburtstag":"08.07.90","Geburtsort":"Piatra Neamț","Geburtsland":"Rumänien","Entfernung zum \nVereinsort in km":"1292,53","Nationalität 1":"Rumänien","Nationalität 2":"","im Verein seit":2013,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[26.382629,46.940327]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Vedad Ibišević","Rückennummer":9,"Position":"Sturm","Geburtstag":"06.08.84","Geburtsort":"Vlasenica","Geburtsland":"Jugoslawien","Entfernung zum \nVereinsort in km":"901,27","Nationalität 1":"Bosnien und Herzegowina","Nationalität 2":"Vereinigte Staaten","im Verein seit":2012,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[18.9480991,44.1832008]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Timo Werner","Rückennummer":19,"Position":"Sturm","Geburtstag":"06.03.96","Geburtsort":"Stuttgart","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":0,"Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2002,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[9.1719198,48.7676697]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Mohammed Abdellaoue","Rückennummer":25,"Position":"Sturm","Geburtstag":"23.10.85","Geburtsort":"Oslo","Geburtsland":"Norwegen","Entfernung zum \nVereinsort in km":"1240,45","Nationalität 1":"Norwegen","Nationalität 2":"","im Verein seit":2013,"Vertrag bis":2017,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[10.75,59.9122887]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Daniel Ginczek","Rückennummer":33,"Position":"Sturm","Geburtstag":"13.04.91","Geburtsort":"Arnsberg","Geburtsland":"Deutschland","Entfernung zum \nVereinsort in km":"301,13","Nationalität 1":"Deutschland","Nationalität 2":"","im Verein seit":2014,"Vertrag bis":2018,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[8.0621004,51.3944016]}},{"type":"Feature","properties":{"Verein":"VfB Stuttgart","Name":"Jan Kliment","Rückennummer":39,"Position":"Sturm","Geburtstag":"01.09.93","Geburtsort":"Myjava","Geburtsland":"Slowakei","Entfernung zum \nVereinsort in km":"610,47","Nationalität 1":"Tschechien","Nationalität 2":"Slowakei","im Verein seit":2015,"Vertrag bis":2019,"marker-color":"#fd0000","marker-size":"small","marker-symbol":"soccer"},"geometry":{"type":"Point","coordinates":[17.5644,48.752701]}}]}];
+			
+		var geojsonMarkerOptions = {
+    radius: 8,
+    fillColor: "#ff7800",
+    color: "#000",
+    weight: 1,
+    opacity: 1,
+    fillOpacity: 0.8
+};
+
+				
+		
+		
+		
+		function onEachFeature(feature, layer) {
+			var popupContent = 
+			"<p>Name: " +	feature.properties.Name + 
+			"<br>Verein: " +feature.properties.Verein + 
+			"<br>Position: " +feature.properties.Position +
+								
+					"</p>";
+
+			if (feature.properties && feature.properties.popupContent) {
+				popupContent += feature.properties.popupContent;
+			}
+
+			layer.bindPopup(popupContent);
+		}
+		
+		
+		L.geoJson(vfbkarte, {
+
+			style: function (feature) {
+				return feature.properties && feature.properties.style;
+			},
+
+			onEachFeature: onEachFeature,
+
+			pointToLayer: function (feature, latlng) {
+				return L.circleMarker(latlng, {
+					radius: 8,
+					fillColor: "#ff7811",
+					color: "#000",
+					weight: 1,
+					opacity: 1,
+					fillOpacity: 0.8
+				});
+			}
+		}).addTo(map);
+		
+		
+		
+		
+		
+
+
+
+		
+		
+		
+		
+      </script>
+  </body>
+</html>
